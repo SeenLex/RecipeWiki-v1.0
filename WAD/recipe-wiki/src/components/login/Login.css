@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "CustomFont";
+}
+
+@font-face {
+  font-family: "CustomFont";
+  src: url("../../fonts/RolexLight.woff2");
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 30em;
+  height: 35em;
+  position: relative;
+  border-radius: 1em;
+  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
+  background-color: white;
+}
+
+.alternative-login {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  height: 3em;
+}
+
+.alternative-login div {
+  display: flex;
+  background-color: black;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 45%;
+  height: 90%;
+  border-radius: 0.25em;
+}
+
+.facebook {
+  background-image: url("../../assets/facebook.png");
+}
+.google {
+  background-image: url("../../assets/google.png");
+}
+
+input {
+  border: none;
+  background-color: rgb(229, 236, 226);
+  width: 80%;
+  height: 4em;
+  border-radius: 0.25em;
+  text-align: center;
+  padding: 2em;
+}
+
+input:focus {
+  outline-color: rgb(32, 177, 255);
+}
+
+.login-button {
+  display: flex;
+  background-color: rgb(32, 177, 255);
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 0.25em;
+  cursor: pointer;
+  width: 40%;
+  height: 3em;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  position: relative;
+  bottom: -2em;
+}
+
+.hide {
+  position: absolute;
+  transform: scale(0);
+}
+
+.login-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25em;
+  background-color: transparent;
+  color: rgb(162, 19, 19);
+}
+
+.blue {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/google.png");
+}
