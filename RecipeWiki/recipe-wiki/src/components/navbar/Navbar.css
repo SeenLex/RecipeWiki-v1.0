@@ -54,6 +54,9 @@
   gap: 8px;
   flex-shrink: 0;
   background-color: white;
+  padding-left: 2rem;
+  height: 3rem;
+  width: 24rem;
 }
 
 .loop {
@@ -70,7 +73,6 @@
   outline: none;
   font-size: 16px;
   font-weight: 500;
-  width: 400px;
   height: 18px;
   background: white;
   border-radius: 30px;

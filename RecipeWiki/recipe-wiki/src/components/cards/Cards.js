@@ -1,6 +1,6 @@
 import React from 'react'
-
-export const Posts = () => {
+import "./Cards.css"
+export const Cards = () => {
   return (
     <div>Posts</div>
   )
