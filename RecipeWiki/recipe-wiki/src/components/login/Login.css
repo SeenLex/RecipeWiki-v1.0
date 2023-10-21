@@ -10,77 +10,77 @@
 }
 
 .page {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  font-size: 0.75em;
 }
 
 .cover {
+  background-color: rgb(235, 93, 28);
+  width: 50%;
+  max-height: 100%;
+  border-radius: 1em;
+  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 30em;
-  height: 35em;
-  position: relative;
-  border-radius: 1em;
-  box-shadow: 0 0.188em 1.55em rgb(156, 156, 156);
-  background-color: white;
+  margin-bottom: 80px;
 }
 
-.alternative-login {
-  display: flex;
-  justify-content: space-around;
+.alt-login {
   width: 80%;
   height: 3em;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
 }
 
-.alternative-login div {
-  display: flex;
+.alt-login div {
+  width: 47.5%;
+  height: 90%;
+  border-radius: 0.25em;
   background-color: black;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   cursor: pointer;
-  width: 45%;
-  height: 90%;
-  border-radius: 0.25em;
+}
+
+.google {
+  background-image: url("../../assets/google.png");
 }
 
 .facebook {
   background-image: url("../../assets/facebook.png");
 }
-.google {
-  background-image: url("../../assets/google.png");
-}
 
 input {
   border: none;
-  background-color: rgb(229, 236, 226);
+  background-color: rgb(229, 226, 226);
   width: 80%;
-  height: 4em;
-  border-radius: 0.25em;
+  border-radius: 0.3em;
   text-align: center;
-  padding: 2em;
-}
-
-input:focus {
-  outline-color: rgb(32, 177, 255);
+  padding: 15px;
+  font-size: 0.75em;
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .login-button {
+  width: 40%;
+  height: 3em;
+  background-color: rgb(255, 184, 32);
   display: flex;
-  background-color: rgb(32, 177, 255);
   justify-content: center;
   align-items: center;
   transition: 0.5s;
   border-radius: 0.25em;
+  margin-bottom: 20px;
+  margin-top: 15px;
   cursor: pointer;
-  width: 40%;
-  height: 3em;
 }
 
 .login-button:hover {
@@ -89,22 +89,12 @@ input:focus {
 
 .text {
   position: relative;
-  bottom: -2em;
+  bottom: 0.5%;
 }
 
 .hide {
   position: absolute;
   transform: scale(0);
-}
-
-.login-popup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0.25em;
-  background-color: transparent;
-  color: rgb(162, 19, 19);
 }
 
 .blue {
@@ -114,4 +104,16 @@ input:focus {
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("../../assets/google.png");
+}
+
+/* -------------------- DESKTOP OPTIMIZATION -------------------- */
+@media only screen and (min-device-width: 64em) {
+  .page {
+    font-size: 1.25em;
+  }
+
+  .cover {
+    width: 25%;
+    max-height: 75%; /* Adjust the max-height for desktop */
+  }
 }
