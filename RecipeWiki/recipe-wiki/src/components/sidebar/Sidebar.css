@@ -1,0 +1,24 @@
+.sidebar {
+  width: 300px; /* Adjust the width as needed */
+  position: fixed;
+  top: 125px; /* Set this to the height of the navbar */
+  left: 0;
+  height: calc(100% - 125px); /* Subtract the navbar height */
+  background-color: #e1eacd;
+  color: black;
+  padding: 20px;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+
+.sidebar-items {
+  padding: 10px;
+  flex: 1;
+}
+
+.sidebar-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+}

@@ -1,23 +1,28 @@
-import { About } from "../about/about";
+import { About } from "../about/About";
 import { Navbar } from "../navbar/Navbar";
 import "./Home.css";
 import React, { useState } from "react";
+import { Sidebar } from "../sidebar/Sidebar";
+import { Cards } from "../cards/Cards";
 
 export const Home = () => {
-  const divs = Array(20).fill(null);
   const [changeContent, setChangeContent] = useState("home");
   const callBack = (value) => {
     setChangeContent(value);
   };
   return (
-    <>
-      <Navbar callBack={callBack} />
-      {changeContent==="home" ? <div className="right-content">
-        <div className="cards-container">
-          <h1>home</h1>
-        </div>
-      </div> : <About />}
+    <div className="home-container">
       
-    </>
+      <Navbar callBack={callBack} />
+      <Cards />
+      {changeContent === "home" ? (
+          <div className="cards-container">
+            
+          </div>
+      ) : (
+        <About />
+      )}
+      <Sidebar />
+    </div>
   );
 };
