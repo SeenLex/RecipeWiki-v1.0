@@ -12,17 +12,16 @@ export const Home = () => {
   };
   return (
     <div className="home-container">
-      
       <Navbar callBack={callBack} />
-      <Cards />
-      {changeContent === "home" ? (
-          <div className="cards-container">
-            
-          </div>
-      ) : (
-        <About />
-      )}
-      <Sidebar />
+      <div className="content-container">
+        <Sidebar />
+        <Cards />
+        {changeContent === "home" ? (
+          <div className="cards-container"></div>
+        ) : (
+          <About />
+        )}
+      </div>
     </div>
   );
 };

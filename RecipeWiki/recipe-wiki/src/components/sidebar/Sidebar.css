@@ -1,16 +1,17 @@
 .sidebar {
-  width: 300px; /* Adjust the width as needed */
+  width: 300px;
   position: fixed;
-  top: 125px; /* Set this to the height of the navbar */
+  height: 100%;
+  top: 125px;
   left: 0;
-  height: calc(100% - 125px); /* Subtract the navbar height */
+  height: calc(100% - 125px);
   background-color: #e1eacd;
   color: black;
   padding: 20px;
   box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
+  position: fixed;
 }
-
 
 .sidebar-items {
   padding: 10px;
@@ -19,6 +20,12 @@
 
 .sidebar-title {
   font-size: 30px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+}
+
+.breakfast{
+  font-size: 20px;
   margin-bottom: 10px;
   overflow-y: auto;
 }

@@ -27,12 +27,48 @@ export const Cards = () => {
       title: "card6",
       test: "lorerbniueasbndaosikmnofnwerionf",
     },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
+      title: "card6",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    
   ]);
   return (
     <div>
       <selection>
         <div className="container">
-          <h1 className="title">responsive cards</h1>
           <div className="cards">
             {cards.map((card, i) => (
               <div key={i} className="card">
