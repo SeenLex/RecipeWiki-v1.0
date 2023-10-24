@@ -66,6 +66,9 @@ export const Cards = () => {
   ]);
   return (
     <>
+      {/* <div className="title-cards">
+        <h1>Recipes</h1>
+      </div> */}
       <div className="cards">
         {cards.map((card, i) => (
           <div key={i} className="card">

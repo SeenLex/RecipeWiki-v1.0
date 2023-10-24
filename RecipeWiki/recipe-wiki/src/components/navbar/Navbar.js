@@ -10,15 +10,15 @@ export const Navbar = ({callBack}) => {
         <h2 className="navbar-content">
           <img className="navbar-logo" src={logo} alt="RecipeWiki Logo" />
         </h2>
-        <a href onClick={() =>{callBack("home")}} className="navbar-link">Home</a>
-        <a href onClick={() =>{callBack("about")}} className="navbar-link">About</a>
+        <a href onClick={() =>{callBack("home")}} className="navbar-button">Home</a>
+        <a href onClick={() =>{callBack("about")}} className="navbar-button">About</a>
       </div>
       <div className="right-side">
         <div className="search-input-container">
           <div className="loop" />
           <input className="search-input" type="text" placeholder="Search" />
         </div>
-        <a href="login" className="navbar-link">Login</a>
+        <a href="login" className="navbar-button">Login</a>
       </div>
     </nav>
   );
