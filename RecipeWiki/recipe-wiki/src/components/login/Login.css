@@ -18,7 +18,7 @@
 }
 
 .cover {
-  background-color: rgb(235, 93, 28);
+  background-color: rgb(253, 253, 253);
   width: 50%;
   max-height: 100%;
   border-radius: 1em;
@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 80px;
+  padding: 2rem;
 }
 
 .alt-login {
@@ -72,7 +73,7 @@ input {
 .login-button {
   width: 40%;
   height: 3em;
-  background-color: rgb(255, 184, 32);
+  background-color: rgb(136, 179, 123);
   display: flex;
   justify-content: center;
   align-items: center;

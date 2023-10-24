@@ -63,23 +63,18 @@ export const Cards = () => {
       title: "card6",
       test: "lorerbniueasbndaosikmnofnwerionf",
     },
-    
   ]);
   return (
-    <div>
-      <selection>
-        <div className="container">
-          <div className="cards">
-            {cards.map((card, i) => (
-              <div key={i} className="card">
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
-                <button className="button">Explore</button>
-              </div>
-            ))}
+    <>
+      <div className="cards">
+        {cards.map((card, i) => (
+          <div key={i} className="card">
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+            <button className="button">Explore</button>
           </div>
-        </div>
-      </selection>
-    </div>
+        ))}
+      </div>
+    </>
   );
 };
