@@ -14,8 +14,9 @@ export const Home = () => {
     <>
       <Navbar callBack={callBack} />
       <div className="content-container">
-        <Sidebar />
+        
         {changeContent === "home" ? <Cards /> : <About />}
+        {changeContent === "home" && (<Sidebar />)}
       </div>
     </>
   );

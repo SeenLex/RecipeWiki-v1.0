@@ -8,6 +8,10 @@ export const Cards = () => {
       test: "lorerbniueasbndaosikmnofnwerionf",
     },
     {
+      title: "card1",
+      test: "lorerbniueasbndaosikmnofnwerionf",
+    },
+    {
       title: "card2",
       test: "lorerbniueasbndaosikmnofnwerionf",
     },
@@ -65,19 +69,19 @@ export const Cards = () => {
     },
   ]);
   return (
-    <>
-      {/* <div className="title-cards">
+    <div>
+      <div className="title-cards">
         <h1>Recipes</h1>
-      </div> */}
+      </div>
       <div className="cards">
         {cards.map((card, i) => (
           <div key={i} className="card">
             <h3>{card.title}</h3>
-            <p>{card.text}</p>
+            <p>{card.test}</p>
             <button className="button">Explore</button>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
