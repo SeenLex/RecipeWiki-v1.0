@@ -5,7 +5,7 @@ export const Cards = () => {
   const [cards] = useState([
     {
       title: "card1",
-      test: "lorerbniueasbndaosikmnofnwerionf",
+      test: "lorerbniueasbndaosikmnofnwerasdasdasdsadsadsadasdsadasdsadsadasdasdadsadasdaionf",
     },
     {
       title: "card1",
@@ -65,23 +65,25 @@ export const Cards = () => {
     },
     {
       title: "card6",
-      test: "lorerbniueasbndaosikmnofnwerionf",
+      test: "lorerbniueasbndaosikmnofnweri",
     },
   ]);
   return (
-    <div>
-      <div className="title-cards">
-        <h1>Recipes</h1>
-      </div>
-      <div className="cards">
-        {cards.map((card, i) => (
-          <div key={i} className="card">
-            <h3>{card.title}</h3>
-            <p>{card.test}</p>
-            <button className="button">Explore</button>
+        <div>
+          <div className="title-cards">
+            <h1>Recipes</h1>
           </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+          <div className="cards">
+            {cards.map((card, i) => (
+              <div key={i} className="card">
+                <h3>{card.title}</h3>
+                <p className="card-text">{card.test}</p>
+                <button className="button">Explore</button>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    };
+
+    
