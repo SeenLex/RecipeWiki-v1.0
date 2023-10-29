@@ -41,8 +41,11 @@ export const Sidebar = () => {
             </button>
             {dropdownState.breakfast && (
               <div className="type-of-meals">
-                {/* Content for the Breakfast dropdown */}
-                {/* Add your content here */}
+                <div className="breakfasts">Quick & Easy</div>
+                <div className="breakfasts">Oatmeals</div>
+                <div className="breakfasts">Sandwiches</div>
+                <div className="breakfasts">Omelette</div>
+                <div className="breakfasts">Vegan</div>
               </div>
             )}
           </div>
@@ -53,8 +56,10 @@ export const Sidebar = () => {
             </button>
             {dropdownState.brunch && (
               <div className="type-of-meals">
-                {/* Content for the Brunch dropdown */}
-                {/* Add your content here */}
+                <div className="brunches">Eggs & Benedicts</div>
+                <div className="brunches">Mexican</div>
+                <div className="brunches">Savory</div>
+                <div className="brunches">Vegan</div>
               </div>
             )}
           </div>
@@ -65,8 +70,13 @@ export const Sidebar = () => {
             </button>
             {dropdownState.lunch && (
               <div className="type-of-meals">
-                {/* Content for the Lunch dropdown */}
-                {/* Add your content here */}
+                <div className="lunches">Soups & Stews</div>
+                <div className="lunches">Grills</div>
+                <div className="lunches">Pasta</div>
+                <div className="lunches">Pizza</div>
+                <div className="lunches">Burgers</div>
+                <div className="lunches">Side Dishes</div>
+                <div className="lunches">Sauce</div>
               </div>
             )}
           </div>
@@ -77,10 +87,10 @@ export const Sidebar = () => {
             </button>
             {dropdownState.dinner && (
               <div className="type-of-meals">
-                <div className="carne">sadada</div>
-                <div className="carne">sadada</div>
-                <div className="carne">sadada</div>
-                <div className="carne">sadada</div>
+                <div className="dinners">Seafood</div>
+                <div className="dinners">Italian</div>
+                <div className="dinners">Vegetarian</div>
+                <div className="dinners">Vegan</div>
               </div>
             )}
           </div>

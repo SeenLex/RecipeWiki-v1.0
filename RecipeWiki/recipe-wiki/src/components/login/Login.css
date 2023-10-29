@@ -4,11 +4,6 @@
   font-family: "CustomFont";
 }
 
-@font-face {
-  font-family: "CustomFont";
-  src: url("../../fonts/RolexLight.woff2");
-}
-
 .page {
   height: 100vh;
   display: flex;
@@ -28,7 +23,44 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 80px;
-  padding: 2rem;
+  padding: 3rem;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+}
+
+input {
+  border: none;
+  background-color: rgb(229, 226, 226);
+  width: 80%;
+  border-radius: 0.3em;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.login-button {
+  width: 80%;
+  height: 3rem;
+  font-size: 25px;
+  background-color: rgb(136, 179, 123);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 0.25em;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  transform: scale(1.05);
 }
 
 .alt-login {
@@ -37,11 +69,12 @@
   display: flex;
   justify-content: space-around;
   margin-top: 10px;
+  margin-bottom: 40px;
 }
 
-.alt-login div {
-  width: 47.5%;
-  height: 90%;
+.google {
+  width: 45%;
+  height: 75%;
   border-radius: 0.25em;
   background-color: black;
   background-position: center;
@@ -54,58 +87,14 @@
   background-image: url("../../assets/google.png");
 }
 
-.facebook {
-  background-image: url("../../assets/facebook.png");
-}
-
-input {
+.signup-button{
   border: none;
-  background-color: rgb(229, 226, 226);
-  width: 80%;
-  border-radius: 0.3em;
-  text-align: center;
-  padding: 15px;
-  font-size: 0.75em;
-  margin-bottom: 25px;
-  margin-top: 25px;
-}
-
-.login-button {
-  width: 40%;
-  height: 3em;
-  background-color: rgb(136, 179, 123);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.5s;
-  border-radius: 0.25em;
-  margin-bottom: 20px;
-  margin-top: 15px;
+  background: none;
   cursor: pointer;
+  font-size: 20px;
+  text-decoration: underline;
 }
 
-.login-button:hover {
-  transform: scale(1.05);
-}
-
-.text {
-  position: relative;
-  bottom: 0.5%;
-}
-
-.hide {
-  position: absolute;
-  transform: scale(0);
-}
-
-.blue {
-  width: 100%;
-  height: 100%;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("../../assets/google.png");
-}
 
 /* -------------------- DESKTOP OPTIMIZATION -------------------- */
 @media only screen and (min-device-width: 64em) {
