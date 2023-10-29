@@ -1,0 +1,11 @@
+.my-favourites{
+    font-size: 25px;
+    margin-bottom: 5px;
+    overflow-y: auto;
+  }
+  
+  .my-favourites-Button{
+    border: none;
+    background: none;
+    cursor: pointer;
+  }

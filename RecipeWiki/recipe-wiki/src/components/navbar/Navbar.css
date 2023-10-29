@@ -5,7 +5,7 @@
 
 .navbar-logo {
   width: 150px;
-  height: 70px;
+  height: 75px;
   display: block;
   margin-right: 20px;
 }
@@ -44,8 +44,15 @@
   align-content: center;
   margin-left: 30px;
   cursor: pointer;
-  border-radius: 20px;
   text-decoration: underline;
+}
+
+.navbar-buttonHome:hover{
+  color: rgb(230, 223, 223);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .navbar-button {
@@ -60,18 +67,14 @@
   border-radius: 20px;
 }
 
-.navbar-link:hover {
-  color: white;
+.navbar-button:hover {
+  color: rgb(230, 223, 223);
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: radial-gradient(#f06a4b, #fe8c03);
-  padding: 0.1rem;
-  border-radius: 100px;
-  flex-shrink: 0;
-  height: 3rem;
-  width: 10rem;
+  
+ 
 }
 
 .search-input-container {

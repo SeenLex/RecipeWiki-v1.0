@@ -7,6 +7,8 @@ import {
   Routes,
   Navigate,
 } from "react-router-dom";
+import { Searchbar } from "./components/searchbar/Searchbar";
+import { MyFavourites } from "./components/my-favourites/MyFavourites";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/searchbar" element={<Searchbar />} />
+          <Route path="/my-favourites" element={<MyFavourites />} />
         </Routes>
       </Router>
     </div>
