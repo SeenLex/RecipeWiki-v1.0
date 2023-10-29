@@ -34,7 +34,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-.title-cards{
+.title-cards {
   display: flex;
   justify-content: flex-start;
   margin-left: 21rem;
@@ -45,7 +45,7 @@ h1 {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: flex-start;
   margin-left: 20rem;
   max-height: 50vh;
@@ -74,8 +74,7 @@ h1 {
   justify-content: space-between;
 }
 
-.card-title{
-  
+.card-title {
 }
 
 .card-text {
