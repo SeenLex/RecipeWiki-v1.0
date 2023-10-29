@@ -9,7 +9,6 @@ const Login = () => {
       <input type="password" placeholder="password" />
       <div className="login-button">Login</div>
       <p className="text">Or sign in with</p>
-      
       <div className="alt-login">
         <div className="google"></div>
       </div>
