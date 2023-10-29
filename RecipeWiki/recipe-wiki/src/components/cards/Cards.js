@@ -69,21 +69,20 @@ export const Cards = () => {
     },
   ]);
   return (
-        <div>
-          <div className="title-cards">
-            <h1>Recipes</h1>
+    <div>
+      <div className="title-cards">
+        <h1>Recipes</h1>
+      </div>
+      <div className="cards">
+        {cards.map((card, i) => (
+          <div key={i} className="card">
+            <img src="https://i.pinimg.com/originals/c3/e7/92/c3e792580a8cb5372d5ac027dcfa8d10.jpg" height={300} width={500} alt=""></img>
+            <h3 className="card-title">{card.title}</h3>
+            <p className="card-text">{card.test}</p>
+            <button className="button">Explore</button>
           </div>
-          <div className="cards">
-            {cards.map((card, i) => (
-              <div key={i} className="card">
-                <h3>{card.title}</h3>
-                <p className="card-text">{card.test}</p>
-                <button className="button">Explore</button>
-              </div>
-            ))}
-          </div>
-        </div>
-      );
-    };
-
-    
+        ))}
+      </div>
+    </div>
+  );
+};

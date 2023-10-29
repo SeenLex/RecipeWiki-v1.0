@@ -12,7 +12,7 @@ const Login = () => {
       <div className="alt-login">
         <div className="google"></div>
       </div>
-      <p className="alternative">Don't have an account? <button className="signup-button">Sign up!</button></p>
+      <p className="alternative">Don't have an account? <a href="signup" className="signup-button">Sign up!</a></p>
     </div>
   );
 };

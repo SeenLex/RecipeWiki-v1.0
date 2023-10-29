@@ -6,7 +6,7 @@ export const Searchbar = ({ input, setInput }) => {
     <div className="search-input-container">
       <div className="loop" />
       <input
-        className="search-input"
+        className="search-input search-bar-n"
         type="text"
         placeholder="Search"
         value={input}
