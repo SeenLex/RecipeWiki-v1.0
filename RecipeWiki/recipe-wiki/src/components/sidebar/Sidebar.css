@@ -33,12 +33,24 @@
 
 .sidebar-title {
   font-size: 25px;
-  margin-bottom: 10px;
   overflow-y: auto;
+  margin-top: 10px;
+}
+
+.sidebar-title-Button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 25px; /* Match the font size with My Favourites */
+  margin-bottom: 5px; /* Match the margin with My Favourites */
+}
+
+.sidebar-title-Button:hover{
+  text-decoration: underline;
 }
 
 .breakfast{
-  font-size: 20px;
+  font-size: 10px;
   overflow-y: auto;
 }
 
@@ -52,14 +64,11 @@
   background: none;
   cursor: pointer;
   padding: 10px;
-  margin: 0;
-  width: 120px;
   text-align: left;
-  font-size: 20px;
-  border-radius: 20px;
+  font-size: 22px;
 }
 
 .meals button:hover {
-  text-decoration: underline;
+  color: #5c5d5a;
 }
 

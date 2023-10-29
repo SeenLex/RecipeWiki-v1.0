@@ -1,81 +1,69 @@
-/* Styles for the About Section */
 .about-section {
-    display: flex; /* Use flexbox to create a horizontal layout */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align content to the left side */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Arial, sans-serif;
     background-color: #f8f8f8;
     padding: 20px;
   }
   
-  /* Styles for Headline */
   .headline {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
-  /* Styles for Subheadline */
   .subheadline {
     font-size: 18px;
     margin-bottom: 30px;
   }
   
-  /* Styles for Feature List */
   .feature-list {
     list-style: none;
     margin: 0;
     padding: 0;
   }
   
-  /* Styles for Feature List Items */
   .feature-item {
     margin-bottom: 10px;
-    display: flex; /* Use flexbox to create a horizontal layout for feature items */
-    align-items: center; /* Center items horizontally */
+    display: flex;
+    align-items: center;
   }
   
-  /* Styles for Icons */
   .feature-icon {
     font-size: 36px;
     color: #e74c3c;
     margin-right: 10px;
   }
   
-  /* Styles for Text Content */
   .feature-text {
     font-size: 16px;
     line-height: 1.4;
   }
   
-  /* Styles for the Community Section */
   .community-section {
     text-align: center;
     background-color: #fff;
     padding: 20px;
   }
   
-  /* Styles for Community Headline */
   .community-headline {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
-  /* Styles for Community Text */
   .community-text {
     font-size: 16px;
     line-height: 1.4;
   }
   
-  /* Styles for Community Image */
   .community-image {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
   }
   
-  /* General Link Styles */
   a {
     text-decoration: none;
     color: #3498db;
