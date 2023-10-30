@@ -23,6 +23,18 @@ export default function Homepage() {
   //   console.log(doc.id, " => ", doc.data());
   // });
 
+  // recipes = []
+  // get all recipes
+  // recipesFromDB = [recipes1, recipes2 ...]
+  // [recipes, setRecipes] = useState([])
+  // setRecipes(recipesFromDB)
+
+  // sort by name asc
+  // myArray = recipes
+  // myArray.sort();
+
+  // setRecipes(myArray)
+
   // get a single recipe
   // const docRefGetOne = doc(db, "recipes", "recipe-1");
   // const docSnapGetOne = await getDoc(docRefGetOne);
@@ -46,35 +58,7 @@ export default function Homepage() {
 
   // delete a single recipe
   // await deleteDoc(doc(db, "recipes", "recipe-3"));
-  // const [recipes, setRecipes] = useState();
-  // const baseLink = "https://api.edamam.com/api/recipes/v2";
-  // const app_id = "77ab4532";
-  // const app_key = "9b2df32292418d119f55ecb45f2d48d3";
 
-  // useEffect(() => {
-  //   const searchRecipes = async (query) => {
-  //     const response = await fetch(
-  //       `${baseLink}?` +
-  //         new URLSearchParams({
-  //           q: query,
-  //           app_id: app_id,
-  //           app_key: app_key,
-  //           type: "public",
-  //         }),
-  //       {
-  //         method: "GET",
-  //       }
-  //     );
-  //     try {
-  //       const recipes = await response.json();
-  //       console.log(recipes.hits)
-  //       setRecipes(recipes.hits);
-  //     } catch (e) {
-  //       console.log(e);
-  //     }
-  //   };
-  //   searchRecipes("chicken fritz recipes");
-  // }, []);
 
   return (
     <div className="grid grid-cols-12">

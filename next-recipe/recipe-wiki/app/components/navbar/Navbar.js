@@ -8,7 +8,7 @@ import Image from "next/image";
 export const Navbar = ({ callBack }) => {
   const [input, setInput] = useState("");
   return (
-    <nav className="navbar flex items-center justify-between bg-red-200 px-4 py-4">
+    <nav className="navbar flex items-center justify-between bg-red-700 px-4 py-4 sticky top-0">
       <div className="flex items-center gap-10">
         <a href="/">
           <h2 className="navbar-content">
