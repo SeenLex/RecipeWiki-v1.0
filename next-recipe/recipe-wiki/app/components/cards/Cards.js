@@ -1,0 +1,47 @@
+"use client"
+import React, { useEffect, useState } from "react";
+import Card from "./Card";
+
+export const Cards = () => {
+  const [recipes, setRecipes] = useState();
+  const baseLink = "https://api.edamam.com/api/recipes/v2";
+  const app_id = "77ab4532";
+  const app_key = "9b2df32292418d119f55ecb45f2d48d3";
+
+  useEffect(() => {
+    const searchRecipes = async (query) => {
+      const response = await fetch(
+        `${baseLink}?` +
+          new URLSearchParams({
+            q: query,
+            app_id: app_id,
+            app_key: app_key,
+            type: "public",
+          }),
+        {
+          method: "GET",
+        }
+      );
+      try {
+        const recipes = await response.json();
+        console.log(recipes.hits)
+        setRecipes(recipes.hits);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    searchRecipes("salad");
+  }, []);
+  return (
+    <div className="col-span-10 py-12 px-6">
+      <div className="title-cards">
+        <h1 className="text-2xl font-bold mb-6">Recipes</h1>
+      </div>
+      <div className="flex flex-wrap gap-8">
+        {recipes && recipes.map((recipe, i) => (
+          <Card key={`card-${i}`} card={recipe.recipe}/>
+        ))}
+      </div>
+    </div>
+  );
+};
