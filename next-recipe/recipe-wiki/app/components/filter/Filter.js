@@ -26,7 +26,7 @@ export const Filter = () => {
     <div className="flex-grow-0">
       <div className="sidebar-title">
         <button
-          className="sidebar-title-Button"
+          className="sidebar-title-Button py-2 text-size-1 hover:text-orange-800"
           onClick={toggleSidebarDropdown}
         >
           <b>Filter</b>

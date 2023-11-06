@@ -8,7 +8,7 @@ import Image from "next/image";
 export const Navbar = ({ callBack }) => {
   const [input, setInput] = useState("");
   return (
-    <nav className="navbar flex items-center justify-between bg-orange-400 px-4 py-4 sticky top-0">
+    <nav className="navbar flex items-center justify-between bg-gradient-to-t from-orange-300 to-orange-500 h-26 px-4 py-4 sticky top-0">
       <div className="flex items-center gap-10">
         <a href="/">
           <h2 className="navbar-content">
@@ -20,7 +20,7 @@ export const Navbar = ({ callBack }) => {
           onClick={() => {
             callBack("home");
           }}
-          className="navbar-buttonHome"
+          className="navbar-buttonHome hover:text-white"
         >
           Home
         </a>
@@ -29,7 +29,7 @@ export const Navbar = ({ callBack }) => {
           onClick={() => {
             callBack("about");
           }}
-          className="navbar-button"
+          className="navbar-buttonAbout hover:text-white"
         >
           About
         </a>

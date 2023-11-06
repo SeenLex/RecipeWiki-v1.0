@@ -13,6 +13,7 @@ import { Cards } from "./components/cards/Cards";
 import { Sidebar } from "./components/sidebar/Sidebar";
 import { db } from "./firebase";
 import { useEffect, useState } from "react";
+import Login from "./login/page";
 
 export default function Homepage() {
   // get all recipes from a collection
@@ -64,6 +65,7 @@ export default function Homepage() {
     <div className="grid grid-cols-12">
       <Sidebar />
       <Cards />
+      <Login />
     </div>
   );
 }

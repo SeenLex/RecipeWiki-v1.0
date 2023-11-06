@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
-export const Cards = () => {
+export const  Cards = () => {
   const [recipes, setRecipes] = useState();
   const baseLink = "https://api.edamam.com/api/recipes/v2";
   const app_id = "77ab4532";
@@ -19,6 +19,7 @@ export const Cards = () => {
             app_id: app_id,
             app_key: app_key,
             type: "public",
+            mealType: "Breakfast",
           }),
         {
           method: "GET",
