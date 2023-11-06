@@ -17,7 +17,7 @@ const Card = ({card}) => {
         <h3 className="mb-4">{card.label}</h3>
         <p className="mb-3">{parseInt(card.calories)} calories</p>
         <a href={`/recipe/${extractIdFromUri(card.uri)}`} className="button px-4 py-2 border border-black rounded-md">Explore</a>
-        <div className="text-red-200">{}</div>
+        <div className="text-green-800">{}</div>
       </div>
     </div>
   );

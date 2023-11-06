@@ -42,7 +42,7 @@ export const Filter = () => {
               Breakfast
             </button>
             {dropdownState.breakfast && (
-              <div className="type-of-meals">
+              <div className="m-3">
                 <div className="breakfasts">Quick & Easy</div>
                 <div className="breakfasts">Oatmeals</div>
                 <div className="breakfasts">Sandwiches</div>
@@ -57,7 +57,7 @@ export const Filter = () => {
               Brunch
             </button>
             {dropdownState.brunch && (
-              <div className="type-of-meals">
+              <div className="m-3">
                 <div className="brunches">Eggs & Benedicts</div>
                 <div className="brunches">Mexican</div>
                 <div className="brunches">Savory</div>
@@ -71,7 +71,7 @@ export const Filter = () => {
               Lunch
             </button>
             {dropdownState.lunch && (
-              <div className="type-of-meals">
+              <div className="m-3">
                 <div className="lunches">Soups & Stews</div>
                 <div className="lunches">Grills</div>
                 <div className="lunches">Pasta</div>
@@ -88,7 +88,7 @@ export const Filter = () => {
               Dinner
             </button>
             {dropdownState.dinner && (
-              <div className="type-of-meals">
+              <div className="m-3">
                 <div className="dinners">Seafood</div>
                 <div className="dinners">Italian</div>
                 <div className="dinners">Vegetarian</div>

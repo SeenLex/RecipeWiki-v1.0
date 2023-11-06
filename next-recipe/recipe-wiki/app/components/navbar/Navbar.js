@@ -8,7 +8,7 @@ import Image from "next/image";
 export const Navbar = ({ callBack }) => {
   const [input, setInput] = useState("");
   return (
-    <nav className="navbar flex items-center justify-between bg-red-700 px-4 py-4 sticky top-0">
+    <nav className="navbar flex items-center justify-between bg-orange-400 px-4 py-4 sticky top-0">
       <div className="flex items-center gap-10">
         <a href="/">
           <h2 className="navbar-content">
@@ -35,9 +35,9 @@ export const Navbar = ({ callBack }) => {
         </a>
       </div>
       <div className="flex items-center gap-4">
-        <Searchbar input={input} setInput={setInput} />
-        <a href="login" className="navbar-button px-4 py-2 border rounded-md border-gray-600 hover:bg-gray-600 hover:text-white">
-          Login
+        {/* <Searchbar input={input} setInput={setInput} /> */}
+        <a href="login" className="navbar-button px-4 py-2 border rounded-md border-gray-600 hover:bg-orange-500 hover:text-white">
+          Sign In
         </a>
       </div>
     </nav>
