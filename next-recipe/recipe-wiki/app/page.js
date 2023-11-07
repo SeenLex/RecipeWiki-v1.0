@@ -65,7 +65,6 @@ export default function Homepage() {
     <div className="grid grid-cols-12">
       <Sidebar />
       <Cards />
-      <Login />
     </div>
   );
 }

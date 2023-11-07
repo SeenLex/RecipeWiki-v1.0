@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 
-export const  Cards = () => {
+export const Cards = () => {
   const [recipes, setRecipes] = useState();
   const baseLink = "https://api.edamam.com/api/recipes/v2";
   const app_id = "77ab4532";
@@ -29,6 +29,7 @@ export const  Cards = () => {
         const recipes = await response.json();
         console.log(recipes.hits);
         setRecipes(recipes.hits);
+        console.log(recipes.hits);
       } catch (e) {
         console.log(e);
       }
@@ -51,11 +52,11 @@ export const  Cards = () => {
         onChange={(e) => setSearch(e.target.value)}
         onKeyDown={(e) => {
           if (e.key == "Enter") {
-            setRealSearch(search)
+            setRealSearch(search);
           }
         }}
       />
-      <div className="flex flex-wrap gap-8">
+      <div className="flex flex-wrap gap-8">  
         {recipes &&
           recipes.map((recipe, i) => (
             <Card key={`card-${i}`} card={recipe.recipe} />
