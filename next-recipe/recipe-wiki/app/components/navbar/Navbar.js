@@ -35,7 +35,6 @@ export const Navbar = ({ callBack }) => {
         </a>
       </div>
       <div className="flex items-center gap-4">
-        {/* <Searchbar input={input} setInput={setInput} /> */}
         <a href="login" className="navbar-button px-4 py-2 border rounded-md border-gray-600 hover:bg-orange-500 hover:text-white">
           Sign In
         </a>
