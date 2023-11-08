@@ -1,103 +1,97 @@
-import React, { useState } from "react";
 
-export const Filter = () => {
-  const [dropdownState, setDropdownState] = useState({
-    breakfast: false,
-    brunch: false,
-    lunch: false,
-    dinner: false,
-  });
+const mealTypes = [
+  'breakfast',
+  'brunch',
+  'lunch',
+  'dinner',
+  'snack',
+]
 
-  const toggleDropdown = (meal) => {
-    setDropdownState((prevState) => ({
-      ...prevState,
-      [meal]: !prevState[meal],
-    }));
-  };
+const dishTypes = [
+  "alcohol cocktail",
+  "biscuits and cookies",
+  "bread",
+  "cereals",
+  "condiments and sauces",
+  "desserts",
+  "drinks",
+  "egg",
+  "ice cream and custard",
+  "main course",
+  "pancake",
+  "pasta",
+  "pastry",
+  "pies and tarts",
+  "pizza",
+  "preps",
+  "preserve",
+  "salad",
+  "sandwiches",
+  "seafood",
+  "side dish",
+  "soup",
+  "special occasions",
+  "starter",
+  "sweets"
+];
 
-  const toggleSidebarDropdown = () => {
-    setDropdownState((prevState) => ({
-      ...prevState,
-      sidebar: !prevState.sidebar,
-    }));
-  };
+const cuisineTypes = [
+  "american",
+  "asian",
+  "british",
+  "caribbean",
+  "central europe",
+  "chinese",
+  "eastern europe",
+  "french",
+  "greek",
+  "indian",
+  "italian",
+  "japanese",
+  "korean",
+  "kosher",
+  "mediterranean",
+  "mexican",
+  "middle eastern",
+  "nordic",
+  "south american",
+  "south east asian",
+  "world"
+];
 
+
+
+export const Filter = ({mealType, setMealType, dishType, setDishType, cuisineType, setCuisineType}) => {
   return (
-    <div className="flex-grow-0">
-      <div className="sidebar-title">
-        <button
-          className="sidebar-title-Button py-2 text-size-1 hover:text-orange-800"
-          onClick={toggleSidebarDropdown}
-        >
-          <b>Filter</b>
-        </button>
+    <>
+      <div>
+        <label className="block mb-1">Meal type</label>
+        <select value={mealType} onChange={(e) => setMealType(e.target.value)} className="px-4 py-2 rounded border border-gray-200 overflow-hidden capitalize" id="mealtype-select">
+          <option value="">Anything</option>
+          {mealTypes.map((mealType) => (
+            <option className="capitalize" key={mealType} value={mealType}>{mealType}</option>
+          ))}
+        </select>
       </div>
-      {dropdownState.sidebar && (
-        <div className="meals">
-          <div>
-            <button
-              onClick={() => toggleDropdown("breakfast")}
-              className="breakfast"
-            >
-              Breakfast
-            </button>
-            {dropdownState.breakfast && (
-              <div className="m-3">
-                <div className="breakfasts">Quick & Easy</div>
-                <div className="breakfasts">Oatmeals</div>
-                <div className="breakfasts">Sandwiches</div>
-                <div className="breakfasts">Omelette</div>
-                <div className="breakfasts">Vegan</div>
-              </div>
-            )}
-          </div>
+      <div>
+        <label className="block mb-1">Dish type</label>
+        <select value={dishType} onChange={(e) => setDishType(e.target.value)} className="px-4 py-2 rounded border border-gray-200 overflow-hidden capitalize" id="dishtype-select">
+          <option value="">Anything</option>
+          {dishTypes.map((dishType) => (
+            <option className="capitalize" key={dishType} value={dishType}>{dishType}</option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label className="block mb-1">Cuisine type</label>
+        <select value={cuisineType} onChange={(e) => setCuisineType(e.target.value)} className="px-4 py-2 rounded border border-gray-200 overflow-hidden capitalize" id="cuisinetype-select">
+          <option value="">Anything</option>
+          {cuisineTypes.map((cuisineType) => (
+            <option className="capitalize" key={cuisineType} value={cuisineType}>{cuisineType}</option>
+          ))}
+        </select>
+      </div>
 
-          <div>
-            <button onClick={() => toggleDropdown("brunch")} className="brunch">
-              Brunch
-            </button>
-            {dropdownState.brunch && (
-              <div className="m-3">
-                <div className="brunches">Eggs & Benedicts</div>
-                <div className="brunches">Mexican</div>
-                <div className="brunches">Savory</div>
-                <div className="brunches">Vegan</div>
-              </div>
-            )}
-          </div>
-
-          <div>
-            <button onClick={() => toggleDropdown("lunch")} className="lunch">
-              Lunch
-            </button>
-            {dropdownState.lunch && (
-              <div className="m-3">
-                <div className="lunches">Soups & Stews</div>
-                <div className="lunches">Grills</div>
-                <div className="lunches">Pasta</div>
-                <div className="lunches">Pizza</div>
-                <div className="lunches">Burgers</div>
-                <div className="lunches">Side Dishes</div>
-                <div className="lunches">Sauce</div>
-              </div>
-            )}
-          </div>
-
-          <div>
-            <button onClick={() => toggleDropdown("dinner")} className="dinner">
-              Dinner
-            </button>
-            {dropdownState.dinner && (
-              <div className="m-3">
-                <div className="dinners">Seafood</div>
-                <div className="dinners">Italian</div>
-                <div className="dinners">Vegetarian</div>
-                <div className="dinners">Vegan</div>
-              </div>
-            )}
-          </div>
-        </div>
-      )}
-    </div>
+    </>
   );
 };

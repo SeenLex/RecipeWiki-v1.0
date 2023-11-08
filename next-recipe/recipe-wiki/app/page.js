@@ -62,8 +62,8 @@ export default function Homepage() {
 
 
   return (
-    <div className="grid grid-cols-12">
-      <Sidebar />
+    <div>
+      {/* <Sidebar /> */}
       <Cards />
     </div>
   );

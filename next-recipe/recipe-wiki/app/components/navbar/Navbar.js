@@ -1,44 +1,68 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/navbarlogo.png";
 import { Searchbar } from "../searchbar/Searchbar";
 import Image from "next/image";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { auth } from "@/app/firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import Link from "next/link";
 
 export const Navbar = ({ callBack }) => {
   const [input, setInput] = useState("");
+  const [user, loading, error] = useAuthState(auth);
+
   return (
-    <nav className="navbar flex items-center justify-between bg-gradient-to-t from-orange-300 to-orange-500 h-26 px-4 py-4 sticky top-0">
+    <nav className="navbar flex items-center justify-between bg-[#FFEECC] h-26 px-4 py-5 sticky top-0 z-10 border-b border-gray-100 shadow">
       <div className="flex items-center gap-10">
-        <a href="/">
+        <Link href="/">
           <h2 className="navbar-content">
-            <Image alt="Recipe" className="max-w-[120px]" src={logo} />
+            <Image alt="Recipe" className="max-w-[110px]" src={logo} />
           </h2>
-        </a>
-        <a
+        </Link>
+        <Link
           href="/"
-          onClick={() => {
-            callBack("home");
-          }}
-          className="navbar-buttonHome hover:text-white"
+          className="underline underline-offset-4 hover:text-orange-400"
         >
           Home
-        </a>
-        <a
-          href="/about"
-          onClick={() => {
-            callBack("about");
-          }}
-          className="navbar-buttonAbout hover:text-white"
-        >
+        </Link>
+        {user && (
+          <Link href="/favourites" className=" hover:text-orange-400">
+            Favourites
+          </Link>
+        )}
+        <Link href="/about" className=" hover:text-orange-400">
           About
-        </a>
+        </Link>
       </div>
-      <div className="flex items-center gap-4">
-        <a href="login" className="navbar-button px-4 py-2 border rounded-md border-gray-600 hover:bg-orange-500 hover:text-white">
-          Sign In
-        </a>
-      </div>
+      {user ? (
+        <div className="flex items-center gap-4">
+          <div>
+            <div className="border border-black rounded-full w-10 aspect-square flex items-center justify-center">
+              {user.email[0]?.toUpperCase()}
+            </div>
+          </div>
+
+          <button
+            onClick={() => {
+              auth.signOut();
+            }}
+            className="navbar-button px-4 py-2 border rounded-md border-gray-600 hover:bg-orange-400 hover:text-white"
+          >
+            Sign out
+          </button>
+        </div>
+      ) : (
+        <div className="flex items-center gap-4">
+          <Link
+            href="login"
+            className="navbar-button px-4 py-2 border rounded-md border-gray-600 hover:bg-orange-500 hover:text-white"
+          >
+            Sign In
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };
