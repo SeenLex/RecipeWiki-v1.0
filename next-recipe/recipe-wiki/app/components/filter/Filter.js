@@ -16,23 +16,14 @@ const dishTypes = [
   "desserts",
   "drinks",
   "egg",
-  "ice cream and custard",
   "main course",
   "pancake",
-  "pasta",
-  "pastry",
-  "pies and tarts",
-  "pizza",
   "preps",
   "preserve",
   "salad",
   "sandwiches",
-  "seafood",
-  "side dish",
   "soup",
-  "special occasions",
   "starter",
-  "sweets"
 ];
 
 const cuisineTypes = [
